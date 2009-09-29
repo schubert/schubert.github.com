@@ -1,0 +1,33 @@
+---
+layout: post
+title: Migrating ownership of a git (hub) repo
+---
+
+h1. {{ page.title }}
+
+p(meta). 28 Apr 2009 - New York
+
+For when you don’t want to fork; you need to change code ownership.
+
+<pre>
+<code>
+git clone git@github.com:originaluser/originalrepo.git
+cd originalrepo
+git remote rm origin
+git remote add origin git@github.com:newuser/newrepo.git
+git push origin master
+</code>
+</pre>
+
+That was easy. Keep in mind this is just the repo. AFAIK there is no way to migrate the wiki or the tracker.
+
+For all your devs who need to switch over to the new repo it should just be a matter of:
+
+<pre>
+<code>
+git remote rm origin
+git remote add origin git@github.com:newuser/newrepo.git
+</code>
+</pre>
+
+Remember to take care of your branches as well. I wonder how you do this with hg and bitbucket.

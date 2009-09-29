@@ -1,0 +1,12 @@
+---
+layout: post
+title: Control inversely relates to value?
+---
+
+h1. {{ page.title }}
+
+p(meta). 21 Jul 2009 - New York
+
+This leads us to the odd conclusion that strict control is something that matters a lot on relatively useless projects and much less on useful projects. It suggests that the more you focus on control, the more likely you’re working on a project that’s striving to deliver something of relatively minor value.
+
+– Tom DeMarco ( "source":http://www2.computer.org/cms/Computer.org/ComputingNow/homepage/2009/0709/rW_SO_Viewpoints.pdf )

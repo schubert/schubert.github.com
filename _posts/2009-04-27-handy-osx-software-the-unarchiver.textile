@@ -1,0 +1,12 @@
+---
+layout: post
+title: Handy OSX Software - The Unarchiver
+---
+
+h1. {{ page.title }}
+
+p(meta). 27 Apr 2009 - New York
+
+I can’t remember how I stumbled across this but I can’t believe it took this long (either for this to exist or for me to find it). "The Unarchiver":http://wakaba.c3.cx/s/apps/unarchiver.html is a replacement for the built-in archive unpacker program in Mac OS X.
+
+Crucially it can handle .rar and stuffit (.sit) files (and a lot more). This means one unpacker to rule them all, no more UnRarX and StuffIt Deluxe.

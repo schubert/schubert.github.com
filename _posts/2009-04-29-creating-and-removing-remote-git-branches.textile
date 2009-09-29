@@ -1,0 +1,76 @@
+---
+layout: post
+title: Creating (and removing) remote Git branches
+---
+
+h1. {{ page.title }}
+
+p(meta). 29 Apr 2009 - New York
+
+Creating and removing remote git branches is to put it mildly, less then obvious so incase you were wondering how or keep forgetting…
+
+Here is the original post and source of all of this.
+
+*git-create-branch*
+
+<pre>
+</code>
+#!/bin/sh
+# git-create-branch
+if [ $# -ne 1 ]; then
+  echo "Usage: ${0} branch_name"
+  exit 127
+fi
+branch_name=$1
+current_branch=`git branch -a | grep \*`
+if [ "${current_branch}" != "* master" ]; then
+  git co master 2>&1 >/dev/null
+fi
+local_branch=`git branch -a | grep ${branch_name} | head -n1`
+remote_branch=`git branch -a | grep origin/${branch_name} | tail -n1`
+if [ "${remote_branch}" != " origin/${branch_name}" ]; then
+  git push origin origin:refs/heads/${branch_name}
+  git fetch origin
+else
+  echo "Remote branch 'origin/${branch_name}' already exists"
+fi
+
+if [ "${local_branch}" != " ${branch_name}" ]; then
+  git checkout --track -b ${branch_name} origin/${branch_name}
+  git pull
+else
+  echo "Local branch 'origin/${branch_name}' already exists!"
+fi
+</code>
+</pre>
+
+*git-remove-branch*
+
+<pre>
+<code>
+#!/bin/sh
+# git-remove-branch
+
+if [ $# -ne 1 ]; then
+  echo "Usage: ${0} branch_name"
+  exit 127
+fi
+branch_name=$1
+current_branch=`git branch -a | grep \*`
+if [ "${current_branch}" != "* master" ]; then
+  git co master 2>&1 >/dev/null
+fi
+local_branch=`git branch -a | grep ${branch_name} | head -n1`
+remote_branch=`git branch -a | grep origin/${branch_name} | tail -n1`
+if [ "${local_branch}" != " ${branch_name}" ]; then
+  echo "No local branch '${branch_name}' found"
+else
+  git branch -D "${branch_name}"
+fi
+if [ "${remote_branch}" != " origin/${branch_name}" ]; then
+  echo "No remote branch 'origin/${branch_name}' found"
+else
+  git push origin :"${branch_name}"
+fi
+</code>
+</pre>

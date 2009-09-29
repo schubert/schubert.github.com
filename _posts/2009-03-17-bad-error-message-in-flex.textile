@@ -1,0 +1,24 @@
+---
+layout: post
+title: Bad Error Message (In Flex)
+---
+
+h1. {{ page.title }}
+
+p(meta). 17 Mar 2009 - New York
+
+Had some flex code that generated the following compile-time error:
+
+<pre>
+<code>
+1061: Call to a possibly undefined method fooBar through a reference with static type mx.controls.VideoDisplay.
+</code>
+</pre>
+
+Already I have a problem with this. If the message is “possibly undefined” then I would expect it to be a warning that an exception *may* occur at runtime if indeed the message does not exist (you see the same thing in Obj-C if you don’t declare a method in your header but that is done correctly).
+
+With this confusion in mind I run off to see why this is a compile-time error and found this "here":http://livedocs.adobe.com/flex/2/langref/compilerErrors.html
+
+bq. You are calling a method that is not defined.
+
+… … in what sense then is it “possibly” undefined?
