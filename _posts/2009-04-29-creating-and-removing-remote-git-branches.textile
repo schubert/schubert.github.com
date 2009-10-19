@@ -61,14 +61,14 @@ if [ "${current_branch}" != "* master" ]; then
   git co master 2>&1 >/dev/null
 fi
 local_branch=`git branch -a | grep ${branch_name} | head -n1`
-remote_branch=`git branch -a | grep origin/${branch_name} | tail -n1`
+remote_branch=`git branch -a | grep remotes/origin/${branch_name} | tail -n1`
 if [ "${local_branch}" != " ${branch_name}" ]; then
   echo "No local branch '${branch_name}' found"
 else
   git branch -D "${branch_name}"
 fi
-if [ "${remote_branch}" != " origin/${branch_name}" ]; then
-  echo "No remote branch 'origin/${branch_name}' found"
+if [ "${remote_branch}" != " remotes/origin/${branch_name}" ]; then
+  echo "No remote branch 'remotes/origin/${branch_name}' found"
 else
   git push origin :"${branch_name}"
 fi
