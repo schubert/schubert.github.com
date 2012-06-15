@@ -1,165 +1,162 @@
-
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>When in doubt...</title>
-  <meta name="author" content="Michael Schubert">
-
-  
-  <meta name="description" content="Blog Archives Recent Posts Github Repos Status updating&#8230; @schubert on Github $.domReady(function(){ if (!window.jXHR){ var jxhr = document. &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://schubert.github.com">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="When in doubt..." type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">When in doubt...</a></h1>
-  
-    <h2>mumble.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:schubert.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
-
-<section>
-  <h1>Github Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/schubert">@schubert</a> on Github
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'schubert',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("schubertcx", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/schubertcx" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @schubertcx</a>
-  
-</section>
-
-
-
-
-
-  
-</aside>
-
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>schubert.cx</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/render.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax-1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css" />
+  </head>
+  <body data-spy="scroll" data-offset="10" id="page">
+    <header>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+          <div class="nav-collapse">
+            <ul id="navi" class="nav">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#second">About</a></li>
+              <li><a href="#third">Work</a></li>
+              <li><a href="#fourth">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2011 - Michael Schubert -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
+    </header>
+    <div id="home">
+      <div class="story">
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="span3">
+            </div>
+            <div class="span9">
+              <h1>Michael Schubert<span class="rnd">dev</span></h1>
+              <div class="row-fluid">
+                <div class="span5">
+                  <h2>Software Developer in NYC</h2>
+                  <p>Polyglot programmer. Devops. Sysops. Project management. Complexity manager. Generalist.</p>
+                  <p><a class="btn" href="#second">View details »</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="second">
+      <div class="container">
+        <div class="story">
+          <div class="row">
+            <h1>About<span class="rnd">me</span></h1>
+            <h3>The reverse IT career</h3>
+            <p>
+              Most developers start with software developer and either stick it out or migrate away to other IT roles.
+              Schubert started in QA, got bored moved on to systems administration. Automated his job, got bored moved on to software development.
+              Thankfully there are so many problems that need well designed software that this should keep him occupied for a long time to come.
+            </p>
+            <h3>"I was into it before it was cool"</h3>
+            <p>
+              Having done "agile" (iterative) software development practices since 2006, along with Ruby since 2005, Schubert has been involved with
+              the tools and technology as it is starting to take off. He now enjoys exploring new areas of programming languages such as Scala and Clojure
+              to expand his capacity to tackle the ever persistent problem of complexity management in software.
+            </p>
+            <p><a class="btn" href="#third">Software Contributions »</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="third">
+      <div class="container">
+        <div class="story">
+          <div class="row">
+            <h1>Software Contributions <span class="rnd">code</span></h1>
+            <p>This is just a small sample of the contributions Schubert has made to open source software.</p>
+            <div class="span10">
+              <h3><a href="http://github.com/casecommons/chef_cap">chef_cap</a> (primary author)</h3>
+              <p>
+                chef_cap takes a tool familiar to almost any Ruby on Rails developer and marries it to a tool that, while powerful, has a steep learning curve: chef.
+                It allows a team to quickly migrate from having a pile of shell scripts in their Capistrano deployment to having a fully functioning set of chef deployment scripts without the hassle of setting up a chef server.
+              </p>
+              <br />
+              <h3><a href="http://github.com/casecommons/schematic">schematic</a> (primary author)</h3>
+              <p>
+                Schematic makes it easy to generate fully-formed and self-contained XSDs that reflect the business rules of their Rails application models. When exposing an XML interface for migrating dataing from legacy systems this can be a valuable tool to rapidly iterate on that process without writing time consuming documentation or manually generation of such documents.
+              </p>
+              <h3><a href="http://github.com/casecommons/pg_search">pg_search</a> (contributor)</h3>
+              <p>
+                pg_search allows a Rails application to take advantage of the powerful full text searching capabilities of PostgreSQL databases with the ease of use by the developer much like SolR provides.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fourth">
+      <div class="container-fluid">
+        <div class="story">
+          <div class="row-fluid">
+            <div class="span4">
+              <h1>Contact me</h1>
+              <p>
+                <a href="mailto:michael&#64;schubert&#46;cx"><strong>michael</strong>&#64;<strong>schubert</strong>&#46;<strong>cx</strong>
+              </a>
+              <br />
+              <br />
+              <strong>Residing in New York City</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    <div class="row">
+      <div class="span3">
+        <p> &copy; Michael Schubert 2012</p>
+      </div>
+    </div>
+    </footer>
+    <script>
+      $(document).ready(function(){
+        $('#navi').localScroll(800);
+        RepositionNav();
+        $(window).resize(function(){
+          RepositionNav();
+        });
+        // .parallax(xPosition, adjuster, inertia, outerHeight) options:
+        // xPosition - Horizontal position of the element.
+        // adjuster - y position to start from.
+        // inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling.
+        // outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport.
+        $('#intro').parallax("50%", 0, 0.1, true);
+        $('#second').parallax("50%", 0, 0.1, true);
+        $('.bg').parallax("5%", 3000, 0.8, true);
+        $('.bg2').parallax("30%", 3500, 0.8, true);
+        $('#third').parallax("50%", 0, 0.1, true);
+        $('#fourth').parallax("50%", 0, 0.1, true);
+      })
+      $('#navbar').scrollspy();
+    </script>
+    <script>
+      $(".collapse").collapse()
+    </script>
+    <!-- page fade effect - this simple trick first waits for page to load(images, content) and after it's loaded fades it. You can remove it by deleting this section. -->
+    <!-- read documentation -->
+    <style> #page {opacity:0;}</style>
+    <script>
+      $(document).ready(function() {
+        $('#page').fadeTo(1500, 1);
+      });
+    </script>
+    <!-- /page fade effect -->
+  </body>
 </html>

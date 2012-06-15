@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title><![CDATA[When in doubt...]]></title>
   <link href="http://schubert.github.com/atom.xml" rel="self"/>
   <link href="http://schubert.github.com/"/>
@@ -8,9 +7,6 @@
   <id>http://schubert.github.com/</id>
   <author>
     <name><![CDATA[Michael Schubert]]></name>
-    
   </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
-
-  
+  <generator uri="http://schubert.cx/">schubert.cx</generator>
 </feed>
